@@ -1,0 +1,17 @@
+
+
+
+  <ul>
+    <li *ngFor="let task of tasks | async" [ngClass]="{ completed: task.completed }">
+      <input type="checkbox" [ngModel]="task.completed" (ngModelChange)="updateTask(task, $event)">
+      <span [ngClass]="{ 'line-through': task.completed }">{{ task.title }}</span>
+    </li>
+  </ul>
+  
+  
+  
+  
+  
+  
+  
+  
